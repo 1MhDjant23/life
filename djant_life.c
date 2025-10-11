@@ -15,14 +15,10 @@ void    printLife(char **life, int w, int h) {
     for (size_t i = 0; i < h; i++)
     {
         for(size_t j = 0; j < w; j++)
-        {
             putchar(life[i][j]);
-        }
         putchar('\n');
     }
 }
-
-
 
 int neighbors(char **grid, int x, int y, int w, int h) {
     int neighbor = 0;
@@ -65,8 +61,6 @@ int main(int argc, char const **argv)
         putchar('e');
         return 1;
     }
-    
-    // char    life[data.width][data.height];
     for (size_t i = 0; i < data.height; i++)
     {
         data.life[i] = calloc(data.width, sizeof(char));
@@ -81,7 +75,6 @@ int main(int argc, char const **argv)
             data.life[i][j] = ' ';
         }
     }
-    printf("reading ...\n");
     int pen = 0, x = 0, y = 0;
     while ((rByte = read(STREAM, &c, 1)) > 0)
     {
@@ -98,7 +91,6 @@ int main(int argc, char const **argv)
             pen = !pen;
         if (pen)
             data.life[y][x] = '0';
-        // putchar(c);
     }
     // start simulation
     int neighbor = 0;
@@ -124,7 +116,6 @@ int main(int argc, char const **argv)
         }
         ft_free(new_grid, data.height);
     }
-    
     printLife(data.life, data.width, data.height);
     return 0;
 }
@@ -142,9 +133,7 @@ char    **copy_grid(char **source, int w, int h) {
             return NULL;
         }
         for (size_t i = 0; i < w; i++)
-        {
             new_grid[n][i] = source[n][i];
-        }
     }
     return new_grid;
 }
