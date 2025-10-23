@@ -100,7 +100,6 @@ int main(int argc, char const **argv)
         if (!new_grid)
         {
             ft_free(data.life, data.height);
-            putchar('e');
             return 1;
         }
         for (size_t y = 0; y < data.height; y++)
@@ -122,14 +121,17 @@ int main(int argc, char const **argv)
 
 char    **copy_grid(char **source, int w, int h) {
     char    **new_grid = calloc(h, sizeof(char *));
-    if (!new_grid)
+    if (!new_grid) {
+        putchar('e');
         return NULL;
+    }
     for (size_t n = 0; n < h; n++)
     {
         new_grid[n] = calloc(w, sizeof(char));
         if (!new_grid[n])
         {
             ft_free(new_grid, n);
+            putchar('e');
             return NULL;
         }
         for (size_t i = 0; i < w; i++)
