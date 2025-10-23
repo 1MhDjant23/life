@@ -12,8 +12,6 @@
 - [✏️ Input Commands](#input-commands)
 - [🧠 Game of Life Rules](#game-of-life-rules)
 - [🧩 Output Format](#output-format)
-- [🧪 Examples](#examples)
-
 ---
 
 ## 📖 Overview
@@ -78,23 +76,3 @@ At each iteration:
 Alive cell → 'O'
 
 Dead cell → ' ' (space)
-
-## 🧪 Examples:
-
-1- (e.g: 1)
-$ echo 'sdxddssaaww' | ./life 5 5 0 | cat -e
-     $
- 000 $
- 0 0 $
- 000 $
-     $
---------
-2- (e.g: 2)
-$ echo 'sdxssdswdxdddxsaddawxwdxwaa' | ./life 10 6 0 | cat -e
-          $
- 0   000  $
- 0     0  $
- 000  0   $
-  0  000  $
-          $
-----------
