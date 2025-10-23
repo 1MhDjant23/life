@@ -34,7 +34,7 @@ gcc -Wall -Wextra -Werror *.c -o life
 ```
 
 ## 🚀 Usage
-./life <width> <height> <iterations>
+./life < width > < height > < iterations >
 ----------------------------------------------------------------
 | Argument     | Description                                    |
 | ------------ | ---------------------------------------------- |
